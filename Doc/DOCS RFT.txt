@@ -1,0 +1,5 @@
+Documento de Arquitetura de Software
+https://docs.google.com/document/d/1Rwd9i-z6kn4-TkYqDtQ1PPscfaHJX-Ru/edit?usp=sharing&ouid=107551595872650616875&rtpof=true&sd=true
+
+Documento Levantamento de Requisito
+https://docs.google.com/document/d/1EC0V69x11IZI2qKVNH9KwiG4M_DJ4PIc/edit?usp=sharing&ouid=107551595872650616875&rtpof=true&sd=true
