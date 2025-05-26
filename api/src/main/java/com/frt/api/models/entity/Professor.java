@@ -18,6 +18,9 @@ public class Professor extends Usuario {
     @Column(nullable = false)
     private String telefone;
 
+    @Column(nullable = false)
+    private boolean ativo = true;
+
     // Relacionamento com Administrador (quem cadastrou)
     @ManyToOne
     @JoinColumn(name = "cadastrado_por_id")
