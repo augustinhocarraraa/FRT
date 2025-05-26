@@ -1,18 +1,20 @@
 package com.frt.api.controllers;
 
-import org.springframework.web.bind.annotation.*;
-import org.springframework.beans.factory.annotation.Autowired;
-import com.frt.api.service.admin.AvisoService;
-import com.frt.api.models.dtos.aviso.AvisoResponseDTO;
-
 import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.frt.api.models.dtos.aviso.AvisoResponseDTO;
+import com.frt.api.service.admin.AvisoService;
 
 @RestController
 @RequestMapping("/api/avisos")
 public class AvisoController {
     private final AvisoService avisoService;
 
-    @Autowired
     public AvisoController(AvisoService avisoService) {
         this.avisoService = avisoService;
     }
