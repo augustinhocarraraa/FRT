@@ -24,6 +24,9 @@ public class Disciplina {
     @Column(nullable = false)
     private String nome;
 
+    @Column(nullable = false)
+    private int cargaHoraria;
+
     @ManyToOne
     @JoinColumn(name = "curso_id")
     private Curso curso;
