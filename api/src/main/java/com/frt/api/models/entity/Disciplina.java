@@ -1,11 +1,14 @@
 package com.frt.api.models.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,6 +29,9 @@ public class Disciplina {
 
     @Column(nullable = false)
     private int cargaHoraria;
+
+    @ManyToMany(mappedBy = "disciplinas")
+    private List<Professor> professores;
 
     @ManyToOne
     @JoinColumn(name = "curso_id")
