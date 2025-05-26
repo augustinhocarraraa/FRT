@@ -9,6 +9,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
 import lombok.Setter;
@@ -30,4 +32,8 @@ public class Sala {
 
     @Column(nullable = false)
     private Integer capacidade;
+
+    @ManyToOne
+    @JoinColumn(name = "curso_id", nullable = false)
+    private Curso curso;
 }
