@@ -1,20 +1,21 @@
 package com.frt.api.service.auth;
 
-import com.frt.api.models.dtos.auth.LoginDTO;
-import com.frt.api.models.dtos.auth.TokenResponseDTO;
-import com.frt.api.models.entity.Usuario;
-import com.frt.api.models.repo.UsuarioRepository;
-import jakarta.transaction.Transactional;
-import lombok.RequiredArgsConstructor;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.frt.api.models.dtos.auth.LoginDTO;
+import com.frt.api.models.dtos.auth.TokenResponseDTO;
+import com.frt.api.models.entity.Usuario;
+import com.frt.api.models.repo.UsuarioRepository;
 
-import java.util.HashMap;
-import java.util.Map;
+import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
@@ -60,22 +61,33 @@ public class AuthService {
     }
 
     @Transactional
-    public void redefinirSenha(String token, String novaSenha) {
-        if (!jwtService.tokenValido(token)) {
-            throw new IllegalArgumentException("Token inválido ou expirado");
-        }
+public void redefinirSenha(String token, String novaSenha) {
+    // Verifica se o token é válido
+    if (!jwtService.tokenValido(token)) {
+        throw new IllegalArgumentException("Token inválido ou expirado");
+    }
 
-        String email = jwtService.extrairClaim(token, claims -> claims.get("email").toString());
-        String tipo = jwtService.extrairClaim(token, claims -> claims.get("tipo").toString());
+    // Extrai o e-mail e o tipo do token
+    String email;
+    String tipo;
+    try {
+        email = jwtService.extrairClaim(token, claims -> claims.get("email").toString());
+        tipo = jwtService.extrairClaim(token, claims -> claims.get("tipo").toString());
+    } catch (Exception e) {
+        throw new IllegalArgumentException("Token malformado ou claims ausentes");
+    }
 
-        if (!"redefinicao-senha".equals(tipo)) {
-            throw new IllegalArgumentException("Token não autorizado para redefinição de senha");
-        }
+    // Verifica se o token é do tipo correto
+    if (!"redefinicao-senha".equals(tipo)) {
+        throw new IllegalArgumentException("Token não autorizado para redefinição de senha");
+    }
 
-        Usuario usuario = usuarioRepository.findByEmail(email)
-            .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
+    // Busca o usuário pelo e-mail
+    Usuario usuario = usuarioRepository.findByEmail(email)
+        .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
 
-        usuario.setSenha(passwordEncoder.encode(novaSenha));
-        usuarioRepository.save(usuario);
+    // Altera e salva a nova senha
+    usuario.setSenha(passwordEncoder.encode(novaSenha));
+    usuarioRepository.save(usuario);
     }
 }
