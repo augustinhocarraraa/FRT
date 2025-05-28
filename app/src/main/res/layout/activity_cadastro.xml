@@ -1,58 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login.presetation.LoginActivity">
+    tools:context=".cadastro.presetation.CadastroActivity">
 
-    <!-- Logo ImageView -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="350dp"
         android:layout_height="350dp"
-        app:srcCompat="@drawable/adaptive_icon_removebg_preview"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="43dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="43dp"/>
-
-    <!-- Texto de Instrução -->
-
-    <!-- Campo de Email -->
-
-    <!-- Campo de Senha -->
-
-    <!-- Botão de Login -->
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/adaptive_icon_removebg_preview" />
 
     <Button
         android:id="@+id/loginButton"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
         android:background="@drawable/rounded_button"
         android:gravity="center"
-        android:text="Entrar"
+        android:text="Cadastrar"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.619" />
 
     <TextView
         android:id="@+id/instructionsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="20dp"
         android:text="Insira seus dados:"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView" />
 
@@ -60,7 +51,7 @@
         android:id="@+id/passwordEditText"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="520dp"
         android:background="@drawable/rounded_blue_border"
         android:gravity="center"
         android:hint="Senha"
@@ -68,61 +59,70 @@
         android:paddingHorizontal="16dp"
         android:textColorHint="#888888"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_blue_border"
+        android:gravity="center"
+        android:hint="Senha"
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="#888888"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="554dp" />
+
+    <EditText
+        android:id="@+id/userEditText"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_blue_border"
+        android:gravity="center"
+        android:hint="Nome"
+        android:inputType="textPassword"
+        android:paddingHorizontal="16dp"
+        android:textColorHint="#888888"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="437dp" />
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="12dp"
         android:background="@drawable/rounded_blue_border"
         android:gravity="center"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingHorizontal="16dp"
         android:textColorHint="#888888"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/instructionsTextView" />
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="496dp" />
 
     <TextView
         android:id="@+id/noAccountTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Não tem uma conta?"
+        android:text="Já uma conta?"
         android:textColor="#000000"
-        android:textSize="16sp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="650dp" />
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="687dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="Cadastre-se"
+        android:text="Entrar"
         android:textColor="#1E56A0"
-        android:textSize="16sp"
+        android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="672dp" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:text="Esqueceu a senha?"
-        android:textColor="#1E56A0"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="599dp" />
+        tools:layout_editor_absoluteX="223dp"
+        tools:layout_editor_absoluteY="721dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
