@@ -32,24 +32,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfab664f-5707-4534-8f24-38940e517923" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_button.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/cadastro/data/Cadastro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/cadastro/utils/CadastroService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/shared/utils/RetrofitClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/feira_das_cores.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.6/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/cadastro/presetation/CadastroActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/cadastro/presetation/CadastroActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/cadastro/presetation/CadastroActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/login/presetation/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/frt/mobile/login/presetation/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/buttom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/entrar_removebg_preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_cadastro.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cadastro.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_cadastro.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/style.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,8 +72,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -82,32 +86,36 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2xjZovSs4JHHJHoqxiRIN85x2F9" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "origin/dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;origin/dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AndroidSdkUpdater&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="android.template.-1239628536">
       <recent name="com.frt.mobile.cadastro.presetation" />
       <recent name="com.frt.mobile.login.presetation" />
       <recent name="com.frt.mobile.home.presetation" />
+    </key>
+    <key name="android.template.-1136454503">
+      <recent name="com.frt.mobile" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.LoginActivity">

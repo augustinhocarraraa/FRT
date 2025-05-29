@@ -97,32 +97,37 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="650dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="666dp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:padding="15sp"
         android:text="Cadastre-se"
         android:textColor="#1E56A0"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="672dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="675dp" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
+        android:padding="15sp"
         android:text="Esqueceu a senha?"
         android:textColor="#1E56A0"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="599dp" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="592dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
