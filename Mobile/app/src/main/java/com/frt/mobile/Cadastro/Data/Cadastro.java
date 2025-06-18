@@ -1,42 +1,53 @@
 package com.frt.mobile.Cadastro.Data;
 
 public class Cadastro {
-    String nome;
-    String registroAcademico;
-    String email;
-    String perfil;
+    private String nome;
+    private String email;
+    private String senha;
+    private String perfil; // NOVO CAMPO: Para armazenar o perfil selecionado
 
-    public void SetName(String nome){
+    public Cadastro(String nome, String email, String senha, String perfil) {
         this.nome = nome;
-    }
-
-    public String getName(){
-        return this.nome;
-    }
-
-    public void setEmail(){
         this.email = email;
-    }
-
-    public String getEmail(){
-        return this.email;
-    }
-
-    public void setPerfil(String perfil){
+        this.senha = senha;
         this.perfil = perfil;
     }
 
-    public String getPerfil(){
-        return this.perfil;
+    // Construtor vazio para desserialização (se necessário)
+    public Cadastro() {
     }
 
-    public void setRegistroAcademico(String registroAcademico){
-        this.registroAcademico = registroAcademico;
+    // Getters
+    public String getNome() {
+        return nome;
     }
 
-    public String getRegistroAcademico(){
-        return this.registroAcademico;
+    public String getEmail() {
+        return email;
     }
 
+    public String getSenha() {
+        return senha;
+    }
 
+    public String getPerfil() {
+        return perfil;
+    }
+
+    // Setters
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setPerfil(String perfil) {
+        this.perfil = perfil;
+    }
 }

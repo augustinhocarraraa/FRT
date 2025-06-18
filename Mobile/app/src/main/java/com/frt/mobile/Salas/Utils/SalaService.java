@@ -16,7 +16,7 @@ public interface SalaService {
 
     // Endpoint para buscar todas as salas disponíveis
     // Adapte o endpoint conforme sua API (ex: "/salas/disponiveis")
-    @GET("api/salas") // Exemplo: Sua API deve ter um endpoint para listar salas
+    @GET("salas") // Substitua "salas" pelo endpoint real da sua API
     Call<List<Salas>> getSalas();
 
     // Endpoint para fazer uma reserva de sala (exemplo, você precisará adaptar os parâmetros)

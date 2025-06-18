@@ -3,20 +3,20 @@ package com.frt.mobile.Salas.Data;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button; // Importar Button
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.frt.mobile.R;
+import com.frt.mobile.R; // Certifique-se de que este import está correto
 
 import java.util.List;
 
 public class ReservaAdapter extends RecyclerView.Adapter<ReservaAdapter.ReservaViewHolder> {
 
     private List<Reserva> reservasList;
-    private OnReservaActionListener listener; // Interface para lidar com cliques no botão
+    private OnReservaActionListener listener;
 
     // Interface para comunicação com a Activity/Fragment
     public interface OnReservaActionListener {
@@ -37,7 +37,8 @@ public class ReservaAdapter extends RecyclerView.Adapter<ReservaAdapter.ReservaV
     @Override
     public ReservaAdapter.ReservaViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View view = inflater.inflate(R.layout.activity_reserva, parent, false);
+        // CORRIGIDO: Agora infla o layout do item de reserva, não o da activity
+        View view = inflater.inflate(R.layout.reserva_item, parent, false);
         return new ReservaViewHolder(view);
     }
 
@@ -45,8 +46,9 @@ public class ReservaAdapter extends RecyclerView.Adapter<ReservaAdapter.ReservaV
     public void onBindViewHolder(@NonNull ReservaAdapter.ReservaViewHolder holder, int position) {
         Reserva reserva = reservasList.get(position);
 
-        holder.nomeSalaTextView.setText("Sala: " + reserva.getSalaNumero());
-        holder.professorNomeTextView.setText("Professor: " + reserva.getProfessorNome());
+        // CORRIGIDO: Usando getSalaId() e getProfessorId() de Reserva.java
+        holder.nomeSalaTextView.setText("Sala: " + reserva.getSalaId()); // Usando getSalaId()
+        holder.professorNomeTextView.setText("Professor: " + reserva.getProfessorId()); // Usando getProfessorId()
         holder.dataHoraInicioTextView.setText("Início: " + reserva.getDataHoraInicio());
         holder.dataHoraFimTextView.setText("Fim: " + reserva.getDataHoraFim());
         holder.statusTextView.setText("Status: " + reserva.getStatus());
@@ -84,17 +86,18 @@ public class ReservaAdapter extends RecyclerView.Adapter<ReservaAdapter.ReservaV
         TextView dataHoraFimTextView;
         TextView statusTextView;
         TextView justificativaTextView;
-        Button actionButton; // Declarar o Button
+        Button actionButton;
 
         public ReservaViewHolder(@NonNull View itemView) {
             super(itemView);
+            // CORRIGIDO: Usando tv_nome_sala conforme definido em reserva_item.xml
             nomeSalaTextView = itemView.findViewById(R.id.tv_nome_sala);
             professorNomeTextView = itemView.findViewById(R.id.tv_professor_nome);
             dataHoraInicioTextView = itemView.findViewById(R.id.tv_data_hora_inicio);
             dataHoraFimTextView = itemView.findViewById(R.id.tv_data_hora_fim);
             statusTextView = itemView.findViewById(R.id.tv_status);
             justificativaTextView = itemView.findViewById(R.id.tv_justificativa);
-            actionButton = itemView.findViewById(R.id.btn_action_reserva); // Inicializar o Button
+            actionButton = itemView.findViewById(R.id.btn_action_reserva);
         }
     }
 }

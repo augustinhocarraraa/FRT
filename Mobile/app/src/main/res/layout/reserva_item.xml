@@ -15,7 +15,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/tv_numero_sala"
+            android:id="@+id/tv_nome_sala"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -24,29 +24,52 @@
             android:layout_marginBottom="4dp"/>
 
         <TextView
-            android:id="@+id/tv_tipo_sala"
+            android:id="@+id/tv_professor_nome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Tipo: [Tipo da Sala]"
+            android:text="Professor: [Nome do Professor]"
             android:layout_marginBottom="4dp"/>
 
         <TextView
-            android:id="@+id/tv_capacidade"
+            android:id="@+id/tv_data_hora_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Início: DD/MM/AAAA HH:MM"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tv_data_hora_fim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="Fim: DD/MM/AAAA HH:MM"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
-            android:text="Capacidade: [Capacidade]"
-            android:layout_marginBottom="8dp"/>
+            android:textStyle="italic"
+            android:text="Status: [Status da Reserva]"
+            android:layout_marginBottom="4dp"/>
 
-        <Button
-            android:id="@+id/btn_reservar_sala"
+        <TextView
+            android:id="@+id/tv_justificativa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Reservar Sala"
+            android:textSize="14sp"
+            android:text="Justificativa: [Justificativa da Reserva]" />
+
+        <Button
+            android:id="@+id/btn_action_reserva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Detalhes/Ação"
             android:layout_gravity="end"/>
 
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

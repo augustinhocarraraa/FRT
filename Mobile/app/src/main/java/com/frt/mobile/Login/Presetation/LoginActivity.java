@@ -14,7 +14,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.frt.mobile.Home.Presetation.HomeActivity; // Para redirecionar após o login
 import com.frt.mobile.Login.Data.Login;
 import com.frt.mobile.Login.Data.LoginResponse;
 import com.frt.mobile.Login.Utils.AuthService;

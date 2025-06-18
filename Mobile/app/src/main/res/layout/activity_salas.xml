@@ -8,24 +8,41 @@
     android:padding="16dp"
     tools:context=".Salas.Presetation.SalasActivity">
 
+    <!-- NOVO: Botão de voltar personalizado (ImageButton) -->
+    <ImageButton
+        android:id="@+id/btn_back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Voltar"
+        android:padding="16dp"
+        android:src="@drawable/ic_arrow_back" />
+
+    <!-- TextView para o título "Salas Disponíveis", fixo no topo. -->
+
+    <!-- RecyclerView para exibir a lista de salas. -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Salas Disponíveis"
         android:textSize="24sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp"/>
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/salas_recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/sala_item" /> <ProgressBar
-    android:id="@+id/progress_bar_salas"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center"
-    android:visibility="gone" />
+        tools:listitem="@layout/sala_item" />
+
+    <!-- ProgressBar para indicar carregamento, inicialmente invisível e centralizada. -->
+    <ProgressBar
+        android:id="@+id/progress_bar_salas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
 </LinearLayout>

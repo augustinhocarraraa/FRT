@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="perfis_usuario">
+        <item>ALUNO</item>
+        <item>PROFESSOR</item>
+        <!-- Adicione outros perfis se necessário, como ADMINISTRADOR -->
+    </string-array>
+</resources>
