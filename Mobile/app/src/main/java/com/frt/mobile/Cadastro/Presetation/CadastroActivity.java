@@ -47,7 +47,6 @@ public class CadastroActivity extends AppCompatActivity {
         spinnerPerfil = findViewById(R.id.spinner_perfil);
         btnCadastrar = findViewById(R.id.btn_cadastrar);
         tvVoltarLogin = findViewById(R.id.tv_voltar_login);
-        progressBarCadastro = findViewById(R.id.progress_bar_cadastro);
         btnBackArrowCadastro = findViewById(R.id.btn_back_arrow_cadastro);
 
         // Configura o listener de clique para o botão de voltar personalizado
